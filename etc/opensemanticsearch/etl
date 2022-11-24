@@ -5,7 +5,7 @@
 #
 
 # print debug messages
-#config['verbose'] = True
+config['verbose'] = True
 
 
 #
@@ -127,12 +127,12 @@ config['plugins'].append('enhance_rdf')
 #
 
 # Disable OCR for image files (i.e for more performance and/or because you don't need the text within images or have only photos without photographed text)
-#config['ocr'] = False
+config['ocr'] = True
 
 # Option to disable OCR of embedded images in PDF by Tika
 # so (if alternate plugin is enabled) OCR will be done only by alternate
 # plugin enhance_pdf_ocr (which else works only as fallback, if Tika exceptions)
-#config['ocr_pdf_tika'] = False
+config['ocr_pdf_tika'] = True
 
 # Use OCR cache
 config['ocr_cache'] = '/var/cache/tesseract'
@@ -149,13 +149,13 @@ config['plugins'].append('enhance_pdf_ocr')
 #and set ocr_lang to this value (be careful, the tesseract package for english is "eng" (not "en") german is named "deu", not "de"!)
 
 # set OCR language to English/default
-#config['ocr_lang'] = 'eng'
+config['ocr_lang'] = 'eng'
 
 # set OCR language to German/Deutsch
 #config['ocr_lang'] = 'deu'
 
 # set multiple OCR languages
-config['ocr_lang'] = 'eng+deu'
+#config['ocr_lang'] = 'eng+deu'
 
 
 #
@@ -166,19 +166,19 @@ config['ocr_lang'] = 'eng+deu'
 config['plugins'].append('enhance_regex')
 
 # Regex config for IBAN extraction
-config['regex_lists'].append('/etc/opensemanticsearch/regex/iban.tsv')
+#config['regex_lists'].append('/etc/opensemanticsearch/regex/iban.tsv')
 
 
 #
 # Email address and email domain extraction
 #
-config['plugins'].append('enhance_extract_email')
+#config['plugins'].append('enhance_extract_email')
 
 
 #
 # Phone number extraction
 #
-config['plugins'].append('enhance_extract_phone')
+#config['plugins'].append('enhance_extract_phone')
 
 
 #
@@ -262,14 +262,14 @@ config['stanford_ner_java_options'] = '-mx1000m'
 # Law clauses extraction
 #
 
-config['plugins'].append('enhance_extract_law')
+#config['plugins'].append('enhance_extract_law')
 
 
 #
 # Money extraction
 #
 
-config['plugins'].append('enhance_extract_money')
+#config['plugins'].append('enhance_extract_money')
 
 
 #
@@ -285,5 +285,5 @@ config['plugins'].append('enhance_extract_money')
 #config['neo4j_host'] = 'localhost'
 
 # Username & password
-#config['neo4j_user'] = 'neo4j'
-#config['neo4j_password'] = 'neo4j'
+config['neo4j_user'] = 'neo4j'
+config['neo4j_password'] = 'neo4j'
