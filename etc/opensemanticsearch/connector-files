@@ -52,7 +52,6 @@ config['plugins'] = [
             'enhance_pst',
             'enhance_file_mtime',
             'enhance_path',
-            'enhance_extract_hashtags',
             'enhance_warc',
             'clean_title',
             'enhance_multilingual',
