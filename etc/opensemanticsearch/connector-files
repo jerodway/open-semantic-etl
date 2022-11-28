@@ -20,7 +20,7 @@
 # you can map the servers path to the users path
 
 # default: user can access the file system, so /fullpath/filename will be mapped to file:///fullpath/filename
-config['mappings'] = { "/": "file:///" }
+config['mappings'] = {"/shared/MFLResearch": "file://///bhicalpipsqldev/MFLResearch" }
 
 
 # If documents access not via filesystem but via website (http)
@@ -40,4 +40,4 @@ config['mappings'] = { "/": "file:///" }
 
 # this option wont change the uri (which is the base of this option and can be mapped and stripped above),
 # it will only change/strip/shorten the path facet in the interactive navigation of the user interface
-#config['facet_path_strip_prefix'] = [ "file:///home/", "file://" ]
+config['facet_path_strip_prefix'] = [ "file://///bhicalpipsqldev/" ]

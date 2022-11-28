@@ -28,6 +28,10 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
     python3-sparqlwrapper \
     python3-wheel \
     tesseract-ocr \
+    nfs-common \
+    cifs-utils \
+    iputils-ping \
+    nano \
 #    tesseract-ocr-all \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -49,6 +53,8 @@ RUN adduser --system --disabled-password opensemanticetl
 
 RUN mkdir /var/cache/tesseract
 RUN chown opensemanticetl /var/cache/tesseract
+
+RUN mkdir /shared
 
 USER opensemanticetl
 
