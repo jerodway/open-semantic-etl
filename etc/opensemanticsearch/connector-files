@@ -41,3 +41,19 @@ config['mappings'] = {"/shared/MFLResearch": "file://///bhicalpipsqldev/MFLResea
 # this option wont change the uri (which is the base of this option and can be mapped and stripped above),
 # it will only change/strip/shorten the path facet in the interactive navigation of the user interface
 config['facet_path_strip_prefix'] = [ "file://///bhicalpipsqldev/" ]
+
+config['plugins'] = [
+            'enhance_mapping_id',
+            'filter_blacklist',
+            'filter_file_not_modified',
+            'enhance_extract_text_tika_server',
+            'enhance_detect_language_tika_server',
+            'enhance_contenttype_group',
+            'enhance_pst',
+            'enhance_file_mtime',
+            'enhance_path',
+            'enhance_extract_hashtags',
+            'enhance_warc',
+            'clean_title',
+            'enhance_multilingual',
+        ]
