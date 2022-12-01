@@ -5,7 +5,7 @@
 #
 
 # print debug messages
-config['verbose'] = True
+#config['verbose'] = True
 
 
 #
@@ -127,7 +127,7 @@ config['plugins'].append('enhance_rdf')
 #
 
 # Disable OCR for image files (i.e for more performance and/or because you don't need the text within images or have only photos without photographed text)
-#config['ocr'] = False
+config['ocr'] = False
 
 # Option to disable OCR of embedded images in PDF by Tika
 # so (if alternate plugin is enabled) OCR will be done only by alternate
@@ -138,7 +138,7 @@ config['plugins'].append('enhance_rdf')
 config['ocr_cache'] = '/var/cache/tesseract'
 
 # Option to disable OCR cache
-#config['ocr_cache'] = None
+config['ocr_cache'] = None
 
 # Do OCR for images embedded in PDF documents (i.e. designed images or scanned or photographed documents)
 #config['plugins'].append('enhance_pdf_ocr')
@@ -189,7 +189,7 @@ config['plugins'].append('enhance_regex')
 config['plugins'].append('enhance_entity_linking')
 
 # Enable SpaCy NER plugin
-config['plugins'].append('enhance_ner_spacy')
+#config['plugins'].append('enhance_ner_spacy')
 
 # Spacy NER Machine learning classifier (for which language and with which/how many classes)
 
