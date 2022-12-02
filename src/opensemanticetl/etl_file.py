@@ -73,6 +73,8 @@ class Connector_File(ETL):
             "/etc/opensemanticsearch/blacklist/whitelist-url-suffix"]
         self.config['whitelist_regex'] = [
             "/etc/opensemanticsearch/blacklist/whitelist-url-regex"]
+        self.config['blackest_list_regex'] = [
+            '/etc/opensemanticsearch/blacklist/the_blackest_of_lists-url-regex']
 
     def read_configfiles(self):
         #

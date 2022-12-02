@@ -84,6 +84,11 @@ class filter_blacklist(object):
 
         # if blacklist type configurated in parameters, check this blacklists for URI
 
+        if 'blackest_list_regex' in parameters:
+            if is_in_lists(listfiles=parameters['blackest_list_regex'], value=uri, match="regex"):
+                parameters['break'] = True
+                return parameters, data
+
         if 'blacklist_prefix' in parameters:
 
             if is_in_lists(listfiles=parameters['blacklist_prefix'], value=uri, match="prefix"):

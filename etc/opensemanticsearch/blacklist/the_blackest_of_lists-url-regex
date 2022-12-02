@@ -1,0 +1,3 @@
+# Blacklist URLs with text patterns by regular expressions (regex)
+# Hit these ones before any whitelisting, so there should be no chance of these files getting through
+\/\~\$
