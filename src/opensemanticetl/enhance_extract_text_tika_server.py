@@ -152,6 +152,19 @@ class enhance_extract_text_tika_server(object):
         if parsed['content']:
             data['content_txt'] = parsed['content']
 
+        # change mappings for office documents
+        suff = ('.pptx', '.ppt', '.doc', '.docx', '.xls', '.xlsx')
+        if filename.lower().endswith(suff):
+            loc_mapping = {
+                'Content-Type': 'content_type_ss',
+                'meta:last-author': 'author_ss',
+                'Content-Encoding': 'Content-Encoding_ss',
+                'dc:subject': 'subject_ss',
+    }
+        else:
+            loc_mapping = self.mapping
+
+
         tika_exception = False
         for tika_field in parsed["metadata"]:
 
@@ -164,8 +177,8 @@ class enhance_extract_text_tika_server(object):
                 data['etl_error_plugins_ss'].append(tika_field)
 
             # copy Tika fields to (mapped) data fields
-            if tika_field in self.mapping:
-                data[self.mapping[tika_field]] = parsed['metadata'][tika_field]
+            if tika_field in loc_mapping:
+                data[loc_mapping[tika_field]] = parsed['metadata'][tika_field]
             else:
                 data[tika_field + '_ss'] = parsed['metadata'][tika_field]
 
