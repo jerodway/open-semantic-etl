@@ -41,6 +41,7 @@ class clean_title(object):
                 filename = parameters['id'].split('/')[-1]
 
                 data['title_txt'] = filename
+                data['etl_title_from_filename_b'] = True
 
         except:
             sys.stderr.write(

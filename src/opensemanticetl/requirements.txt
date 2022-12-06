@@ -14,3 +14,4 @@ SPARQLWrapper
 tika
 twint
 warcio
+pdfminer.six==20201018
