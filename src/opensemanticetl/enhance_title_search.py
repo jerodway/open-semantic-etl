@@ -333,7 +333,7 @@ class TextOnlyInterpreter(PDFPageInterpreter):
 
 class TextOnlyDevice(PDFDevice):
 
-    def __init__(self, rsrcmgr):
+    def __init__(self, rsrcmgr, missing_char=None):
         PDFDevice.__init__(self, rsrcmgr)
         self.last_state = None
         # contains (font, font_size, string)
@@ -341,6 +341,7 @@ class TextOnlyDevice(PDFDevice):
         # current block
         # font, font size, glyph y, [chars]
         self.current_block = None
+        self.MISSING_CHAR = missing_char
 
     # at the end of the file, we need to recover last paragraph
     def recover_last_paragraph(self):
@@ -410,11 +411,10 @@ class TextOnlyDevice(PDFDevice):
             else:
                 unichar = ts.Tf.to_unichr(cid)
         except PDFUnicodeNotDefined as unicode_not_defined:
-            MISSING_CHAR = None
-            if MISSING_CHAR:
-                unichar = MISSING_CHAR
+            if self.MISSING_CHAR:
+                unichar = self.MISSING_CHAR
             else:
-                raise Exception("PDF contains a unicode char that does not " +
+                raise Exception(f"PDF contains a unicode char {cid} that does not " +
                                 "exist in the font") from unicode_not_defined
         (gx, gy) = utils.apply_matrix_pt(Trm, (0, 0))
         #verbose("drawing unichar: '", unichar, "' @", gx, ",", gy)
@@ -447,6 +447,7 @@ class enhance_title_search(object):
     PAGE_NUMBER = 1
     ALGO = 'original'
     ELIOT_TFS = None
+    MISSING_CHAR = " "
 
     def get_title_from_io(self, pdf_io):
         parser = PDFParser(pdf_io)
@@ -457,7 +458,7 @@ class enhance_title_search(object):
         # pylint: disable=no-else-return
         if doc.is_extractable:
             rm = PDFResourceManager()
-            dev = TextOnlyDevice(rm)
+            dev = TextOnlyDevice(rm, missing_char=self.MISSING_CHAR)
             interpreter = TextOnlyInterpreter(rm, dev)
 
             first_page = StringIO()
