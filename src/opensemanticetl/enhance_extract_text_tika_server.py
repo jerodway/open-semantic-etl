@@ -30,6 +30,50 @@ class enhance_extract_text_tika_server(object):
         'dc:subject': 'subject_ss',
     }
 
+    exclude_fields_prefix = []
+
+    try:
+        listfile = open('/etc/opensemanticsearch/blacklist/tikaextraction/blacklist-fieldname-prefix')
+        for line in listfile:
+            line = line.strip()
+            if line and not line.startswith("#"):
+                exclude_fields_prefix.append(line)
+        listfile.close()
+        exclude_fields_prefix = [f"{x}" for x in exclude_fields_prefix]
+        exclude_fields_prefix = tuple(exclude_fields_prefix)
+    except:
+        pass
+
+    # suffixes of non-text fields like nubers
+    exclude_fields_suffix = []
+
+    try:
+        listfile = open('/etc/opensemanticsearch/blacklist/tikaextraction/blacklist-fieldname-suffix')
+        for line in listfile:
+            line = line.strip()
+            if line and not line.startswith("#"):
+                exclude_fields_suffix.append(line)
+        listfile.close()
+        exclude_fields_suffix = [f"{x}" for x in exclude_fields_suffix]
+        exclude_fields_suffix = tuple(exclude_fields_suffix)
+    except:
+        pass
+
+    # full fieldnames
+    exclude_fields = []
+
+    try:
+        listfile = open('/etc/opensemanticsearch/blacklist/tikaextraction/blacklist-fieldname')
+        for line in listfile:
+            line = line.strip()
+            if line and not line.startswith("#"):
+                exclude_fields.append(line)
+        listfile.close()
+        exclude_fields = [f"{x}" for x in exclude_fields]
+        exclude_fields = tuple(exclude_fields)
+    except:
+        pass
+
     def process(self, parameters=None, data=None):
         if parameters is None:
             parameters = {}
@@ -180,7 +224,8 @@ class enhance_extract_text_tika_server(object):
             if tika_field in loc_mapping:
                 data[loc_mapping[tika_field]] = parsed['metadata'][tika_field]
             else:
-                data[tika_field + '_ss'] = parsed['metadata'][tika_field]
+                if not (tika_field.startswith(self.exclude_fields_prefix) or tika_field.endswith(self.exclude_fields_suffix) or (tika_field in self.exclude_fields)):
+                    data[tika_field + '_ss'] = parsed['metadata'][tika_field]
 
         #
         # anaylze and (re)set OCR status to prevent (re)process unnecessary tasks of later stage(s)
