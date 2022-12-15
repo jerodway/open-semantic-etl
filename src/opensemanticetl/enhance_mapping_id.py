@@ -51,7 +51,7 @@ def mapping(value, mappings=None):
 
 # Change mapped value to origin value
 def mapping_reverse(value, mappings=None):
-    if mapping is None:
+    if mappings is None:
         mappings = {}
 
     max_match_len = -1
