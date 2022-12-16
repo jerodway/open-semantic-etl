@@ -1,137 +1,302 @@
-AEB Bracket Value
 AE Setting
+AE Warning
+AEB Bracket Value
 AF Area Height
 AF Area Width
 AF Area X Positions
 AF Area Y Positions
+AF Fine Tune
+AF Illuminator
 AF Image Height
 AF Image Width
 AF Point Count
 AF Point Selected
 AF Points in Focus
+Acceleration Vector
+Accelerometer X
+Accelerometer Y
+Accelerometer Z
+Anti Blur
 Aperture Value
+Apex Brightness Value
 Auto Exposure Bracketing
+Auto Focus
 Auto ISO
 Auto Rotate
 Base ISO
+BestShot Mode
+Black Level
+Body Firmware Version
 Bulb Duration
+Burst Mode 2
+By-line Title
 Camera Info Array
+Camera Model
 Camera Serial Number
 Camera Temperature
 Camera Type
+Camera Uptime
 Canon Model ID
-Contrast
+Caption Writer Editor
+Chroma BackgroundIndex
+Chroma BlackIsZero
+Chroma ColorSpaceType
+Chroma Palette
+Chroma Palette PaletteEntry
+Clear Retouch Value
+Clipping Path Name
+Color Adjustment Node
+Color Balance
+Color Balance Array
+Color Effect
+Color Halftoning Information
+Color Matrix
+Color Saturation
+Color Space
+Color Temp Kelvin
+Color Temperature
+Color Tone
+Color Transfer Functions
+Color Transform
 Components Configuration
 Compressed Bits Per Pixel
 Compression
-Color Balance Array
-Color Space
-Color Temperature
-Color Tone
+Compression NumProgressiveScans
+Content Steward
 Content-Encoding_s
 Continuous Drive Mode
+Contrast
+Contrast Mode
 Control Mode
+Creation-Date
+Crop High Speed
 Custom Functions
 Custom Rendered
-created
-Creation-Date
+DEC Switch Position
 Data BitsPerSample
 Data PlanarConfiguration
 Data Precision
 Data SampleFormat
 Data SignificantBitsPerSample
+Digital Zoom
+Dimension HorizontalPixelOffset
+Dimension HorizontalPixelSize
 Dimension ImageOrientation
 Dimension PixelAspectRatio
-Digital Zoom
+Dimension VerticalPixelOffset
+Dimension VerticalPixelSize
 Display Aperture
+Distortion Correction
+Dynamic Range Optimizer
 Easy Shooting Mode
-embeddedResourceType
-Exif Version
-exif:DateTimeOriginal
-exif:ExposureTime
-exif:Flash
-exif:FocalLength
-exif:FNumber
 Exif Image Height
 Exif Image Width
-exif:IsoSpeedRatings
+Exif Version
 Exposure Bias Value
 Exposure Compensation
 Exposure Mode
+Exposure Shift
 Exposure Time
-F-Number
+External Flash Guide Number
 F Number
-File Name
+F-Number
+Face Detect Array
+Face Detect Frame Crop
+Faces Detected
+File Info Array
 File Length
 File Modified Date
-File Info Array
+File Name
 File Size
+FinePix Color Setting
 Firmware Version
+Flags 0
+Flags 1
 Flash
-FlashPix Version
 Flash Activity
+Flash Compensation
 Flash Details
+Flash Distance
 Flash Exposure Compensation
 Flash Guide Number
-Focal Length
+Flash Level
 Flash Mode
+Flash Output
+Flash Remote Control
+Flash Strength
+Flash Sync Mode
+Flash Warning
+FlashPix Version
+Flicker Reduce
+Focal Length
+Focal Plane Diagonal
 Focal Plane Resolution Unit
 Focal Plane X Resolution
 Focal Plane Y Resolution
 Focal Units per mm
+Focus
 Focus Continuous
 Focus Distance Lower
 Focus Distance Upper
 Focus Mode
+Focus Step Count
+Focus Step Infinity
+Focus Step Near
 Focus Type
-height
-ISO Speed Ratings
+Focus Warning
+Global Altitude
+Global Angle
+Grayscale and Multichannel Halftoning Information
+Grayscale and Multichannel Transfer Function
+Grid and Guides Information
+ICC Untagged Profile
 IHDR
+ISO Sensitivity
+ISO Setting
+ISO Speed Ratings
+Image Adjustment
+Image Boundary
 Image Height
 Image Number
+Image Optimisations
+Image Orientation
 Image Size
-Image Width
 Image Type
+Image Width
+Intelligent Auto
+Intelligent Exposure
+Intelligent Resolution
+Internal Flash
+Internal ND Filter
 Interoperability Index
 Interoperability Version
 Iso
+JPEG Comment
+JPEG Quality
 Last-Modified
 Last-Save-Date
+Layer State Information
+Layers Group Information
+Lens Model
 Lens Type
+Light source
+Live Photo ID
+LocalColorTable
 Long Focal Length
+Mac Print Info
 Macro Mode
 Manual Flash Output
+Manual Flash Strong
 Max Aperture
 Max Aperture Value
 Measured Color Array
 Measured EV
 Metering Mode
 Min Aperture
+Multi Exposure
 ND Filter
+Noise Filter
+Noise Reduction
 Number of Components
 Number of Tables
-Orientation
+Object Distance
+Onion Skins
 Optical Zoom Code
+Optio Server
+Orientation
+PRONTO SignatureCount
+Panorama Direction
+Panorama Mode
+Path Info 1
 Photo Effect
+Picture Mode Effect
+Pitch Angle
+Pixel Aspect Ratio
+Preview Image Length
+Preview Image Start
+Print Flags
+Print Flags Information
+Processing Information Array
+Quality
+Quick Shot
+Raw Data Byte Order
 Record Mode
+Record Shutter Release
 Related Image Height
 Related Image Width
+Release Mode
+Resolution Info
 Resolution Unit
 Resolution Units
+Retention Period Trigger
+Retouch History
+Roll Angle
+Rotation
+SRAW Quality
 Saturation
-sBIT sBIT_RGBAlpha
 Scene Capture Type
+Scene Mode
+Seed Number
+Self Timer
 Sensing Method
+Sensor Pixel Size
 Sequence Number
+Sequential Shot
 Serial Number Format
-Slow Shutter
 Sharpness
+Shooting Mode
 Short Focal Length
 Shutter Speed Value
+Slices
+Slow Shutter
+Slow Sync
+Special Instructions
+Spot Focus Point X Coordinate
+Spot Focus Point Y Coordinate
 Spot Metering Mode
-SRAW Quality
+Sweep Panorama Direction
 Target Aperture
 Target Exposure Time
+Thumbnail Data
+Thumbnail Height Pixels
+Thumbnail Image Valid Area
+Thumbnail Length
+Thumbnail Offset
+Thumbnail Width Pixels
+Total Zoom
+Transparency Alpha
+Transparency TransparentIndex
+Urgency
+VR Info
+Valid AF Point Count
+White Balance Bias
+White Balance Blue
+White Balance Temperature
+White Board
+Wide Focus Zone
+WizKit Template Type
+XPressPrivate
+Y Resolution
+YCbCr Positioning
+Zoom Source Width
+Zoom Step Count
+Zoom Target Width
+created
+custom Marketing Style
+custom Mendeley Recent Style Id
+embeddedResourceType
+exif:DateTimeOriginal
+exif:ExposureTime
+exif:FNumber
+exif:Flash
+exif:FocalLength
+exif:IsoSpeedRatings
+gAMA
+height
+pHYs
+photoshop ColorMode
+sBIT sBIT_RGBAlpha
+sRGB
 tiff:BitsPerSample
 tiff:ImageLength
 tiff:ImageWidth
@@ -139,16 +304,8 @@ tiff:Make
 tiff:Model
 tiff:Orientation
 tiff:ResolutionUnit
+tiff:SamplesPerPixel
+tiff:Software
 tiff:XResolution
 tiff:YResolution
-Thumbnail Height Pixels
-Thumbnail Width Pixels
-Thumbnail Image Valid Area
-Thumbnail Length
-Thumbnail Offset
-Transparency Alpha
-Valid AF Point Count
-YCbCr Positioning
-Y Resolution
-Zoom Source Width
-Zoom Target Width
+PLTE PLTEEntry
