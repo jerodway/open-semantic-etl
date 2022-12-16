@@ -198,6 +198,15 @@ def index_twitter_scraper(search=None, username=None, Profile_full=False, limit=
     opensemanticetl.etl_twitter_scraper.index(username=username, search=search, limit=limit, Profile_full=Profile_full, Index_Linked_Webpages=Index_Linked_Webpages)
 
 
+@app.task(name='etl.post_solr')
+def post_solr(string_to_send=None):
+    if string_to_send is not None:
+        import requests
+        headers = {'Content-Type': "application/json"}
+        host = "solr"
+        host_string = f"http://{host}:8983/solr/opensemanticsearch/update?commit=true"
+
+        requests.request("POST", url=host_string, headers=headers, data=string_to_send.encode())
 
 #
 # Read command line arguments and start
