@@ -14,23 +14,25 @@ class clean_title(object):
         #
         # if no title but subject (i.e. emails), use subject as document / result title
         #
+        if 'filename_extension_s' in data and data['filename_extension_s'].lower() not in ('ppt', 'pptx', 'doc', 'docx'):
 
-        try:
-            # if no field title exists, but field subject, use it
-            if not 'title_txt' in data:
-                if 'subject_ss' in data:
-                    data['title_txt'] = data['subject_ss']
-
-            else:
-                # if title empty and field subject exists, use subjects value
-                if not data['title_txt']:
+            try:
+                # if no field title exists, but field subject, use it
+                if not 'title_txt' in data:
                     if 'subject_ss' in data:
-                        if data['subject_ss']:
-                            data['title_txt'] = data['subject_ss']
+                        data['title_txt'] = data['subject_ss']
 
-        except:
-            sys.stderr.write(
-                "Error while trying to clean empty title with subject")
+                else:
+                    # if title empty and field subject exists, use subjects value
+                    if not data['title_txt']:
+                        if 'subject_ss' in data:
+                            if data['subject_ss']:
+                                data['title_txt'] = data['subject_ss']
+
+            except:
+                sys.stderr.write(
+                    "Error while trying to clean empty title with subject")
+
 
         # if no title yet, use the filename part of URI
         try:
