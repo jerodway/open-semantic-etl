@@ -80,7 +80,8 @@ class filter_blacklist(object):
             if parameters['verbose']:
                 verbose = True
 
-        uri = parameters['id']
+        #uri = parameters['id']
+        uri = parameters['filename']
 
         # if blacklist type configurated in parameters, check this blacklists for URI
 
