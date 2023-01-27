@@ -1,1 +1,9 @@
 # Whitelist of URL Suffixes like file endings
+.pdf
+.PDF
+.PPT
+.PPTX
+.DOC
+.doc
+.ppt
+.pptx
